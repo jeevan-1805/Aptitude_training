@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aptitude Training Road Map | Website by Jeevan</title>
+  <meta name="description" content="Interactive aptitude training roadmap with cumulative radio progression, expandable sections, and saved local progress." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="hero">
+    <div class="hero__topline">
+      <span class="brand-pill">Website by Jeevan</span>
+      <span class="ghost-pill">Saved locally on your device</span>
+    </div>
+
+    <div class="hero__copy">
+      <p class="eyebrow">Aptitude Training Road Map</p>
+      <h1>From fundamentals to timed mixed practice.</h1>
+      <p class="hero__lead">
+        A clean, interactive study roadmap for quantitative aptitude, logical reasoning, and verbal aptitude.
+        Move through the stages in order, and every earlier step stays selected automatically.
+      </p>
+    </div>
+
+    <div class="hero__stats">
+      <div class="stat-card">
+        <span class="stat-card__label">Current stage</span>
+        <strong id="currentStageLabel">Stage 1</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">Unlocked topics</span>
+        <strong id="topicCountLabel">1 of 10</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">Progress</span>
+        <strong id="progressLabel">10%</strong>
+      </div>
+    </div>
+
+    <div class="progress-shell" aria-label="Roadmap progress">
+      <div class="progress-shell__bar">
+        <div class="progress-shell__fill" id="progressFill"></div>
+      </div>
+      <div class="progress-shell__ticks" id="progressTicks" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel panel--selector">
+      <div class="panel__header">
+        <div>
+          <p class="section-kicker">Progression selector</p>
+          <h2>Choose your highest completed stage</h2>
+        </div>
+        <p class="panel__hint">
+          Pick one step. The roadmap automatically marks every earlier stage as selected and opens the matching content.
+        </p>
+      </div>
+
+      <fieldset class="radio-grid" id="stageSelector" aria-label="Aptitude roadmap stages"></fieldset>
+    </section>
+
+    <section class="panel panel--roadmap">
+      <div class="panel__header panel__header--stack">
+        <div>
+          <p class="section-kicker">Main roadmap</p>
+          <h2>Click any card to extend its section</h2>
+        </div>
+        <p class="panel__hint">Cards become fully available as you advance through the selector.</p>
+      </div>
+
+      <div class="roadmap" id="roadmap"></div>
+    </section>
+
+    <section class="grid-two">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="section-kicker">Training rhythm</p>
+            <h2>Daily, weekly, monthly</h2>
+          </div>
+        </div>
+
+        <div class="rhythm">
+          <article class="rhythm-card">
+            <span class="rhythm-card__tag">Daily</span>
+            <p>1 concept block, 20–30 solved examples, 30–50 practice questions, and 10 minutes of error-log review.</p>
+          </article>
+          <article class="rhythm-card">
+            <span class="rhythm-card__tag">Weekly</span>
+            <p>2 topic tests, 1 mixed test, and a revision session for formulas and common traps.</p>
+          </article>
+          <article class="rhythm-card">
+            <span class="rhythm-card__tag">Monthly</span>
+            <p>1 full mock cycle with strict timing, followed by deep analysis of accuracy and speed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="section-kicker">Final mastery checklist</p>
+            <h2>When these are true, you are ready</h2>
+          </div>
+        </div>
+
+        <div class="checklist" id="masteryChecklist"></div>
+      </section>
+    </section>
+
+    <section class="panel panel--summary">
+      <div class="panel__header">
+        <div>
+          <p class="section-kicker">Core rule</p>
+          <h2>Study sequence that keeps the learning stack strong</h2>
+        </div>
+      </div>
+
+      <div class="summary-grid">
+        <article class="summary-card summary-card--accent">
+          <strong>Every new topic should be learned in this order</strong>
+          <p>Concept → formula → worked examples → speed practice → mixed practice → timed mock questions.</p>
+        </article>
+        <article class="summary-card">
+          <strong>Mastery strategy</strong>
+          <p>Build accuracy first, then speed, then pattern recognition, and finally exam strategy.</p>
+        </article>
+        <article class="summary-card">
+          <strong>Path through the roadmap</strong>
+          <p>Foundation → core arithmetic → applications → algebra and geometry → DI/reasoning/verbal → mixed timed practice.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built as an interactive study website by <strong>Jeevan</strong>.</p>
+    <p>All progress is stored in your browser using localStorage.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
